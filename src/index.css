@@ -1,0 +1,248 @@
+@import "tailwindcss";
+
+/* Railway QR System Design System - Professional Industrial Theme */
+
+:root {
+  /* Core Railway Theme Colors */
+  --railway-primary: #1e40af;      /* Deep Blue */
+  --railway-primary-hover: #1d4ed8; /* Blue 600 */
+  --railway-secondary: #059669;    /* Emerald 600 */
+  --railway-accent: #dc2626;       /* Red 600 - Warning/Alert */
+  --railway-warning: #d97706;      /* Amber 600 */
+  --railway-success: #16a34a;      /* Green 600 */
+  
+  /* Steel/Industrial Grays */
+  --railway-dark: #0f172a;         /* Slate 900 */
+  --railway-medium: #334155;       /* Slate 700 */
+  --railway-light: #64748b;        /* Slate 500 */
+  --railway-lighter: #94a3b8;      /* Slate 400 */
+  
+  /* Glass/Modern Effects */
+  --railway-glass: rgba(30, 64, 175, 0.05);
+  --railway-glass-border: rgba(30, 64, 175, 0.1);
+  --railway-backdrop: rgba(15, 23, 42, 0.8);
+}
+
+/* Custom Gradient Backgrounds */
+.bg-gradient-hero {
+  background: linear-gradient(135deg, 
+    #0f172a 0%,           /* slate-900 */
+    #1e293b 25%,          /* slate-800 */
+    #334155 50%,          /* slate-700 */
+    #1e293b 75%,          /* slate-800 */
+    #0f172a 100%          /* slate-900 */
+  );
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+}
+
+.bg-gradient-accent {
+  background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+}
+
+.bg-gradient-glass {
+  background: rgba(248, 250, 252, 0.05);
+  border: 1px solid rgba(248, 250, 252, 0.1);
+}
+
+/* Dark mode glass effect */
+@media (prefers-color-scheme: dark) {
+  .bg-gradient-glass {
+    background: rgba(30, 64, 175, 0.05);
+    border: 1px solid rgba(30, 64, 175, 0.1);
+  }
+}
+
+/* Backdrop Blur Effects */
+.backdrop-blur-glass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Shadow Effects */
+.shadow-elevation {
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 0 0 1px rgba(30, 64, 175, 0.05);
+}
+
+.shadow-glow {
+  box-shadow: 
+    0 4px 14px 0 rgba(30, 64, 175, 0.15),
+    0 2px 10px 0 rgba(30, 64, 175, 0.1);
+}
+
+.shadow-accent {
+  box-shadow: 
+    0 4px 14px 0 rgba(5, 150, 105, 0.15),
+    0 2px 10px 0 rgba(5, 150, 105, 0.1);
+}
+
+/* Text Colors */
+.text-railway-primary { color: #1e40af; }
+.text-railway-secondary { color: #059669; }
+.text-railway-accent { color: #dc2626; }
+.text-railway-warning { color: #d97706; }
+.text-railway-success { color: #16a34a; }
+
+/* Background Colors */
+.bg-railway-primary { background-color: #1e40af; }
+.bg-railway-secondary { background-color: #059669; }
+.bg-railway-accent { background-color: #dc2626; }
+.bg-railway-dark { background-color: #0f172a; }
+
+/* Border Colors */
+.border-railway-primary { border-color: #1e40af; }
+.border-railway-glass { border-color: rgba(30, 64, 175, 0.1); }
+
+/* Custom Status Colors */
+.status-valid {
+  background-color: rgba(22, 163, 74, 0.1);
+  color: #16a34a;
+  border-color: rgba(22, 163, 74, 0.2);
+}
+
+.status-warning {
+  background-color: rgba(217, 119, 6, 0.1);
+  color: #d97706;
+  border-color: rgba(217, 119, 6, 0.2);
+}
+
+.status-expired {
+  background-color: rgba(220, 38, 38, 0.1);
+  color: #dc2626;
+  border-color: rgba(220, 38, 38, 0.2);
+}
+
+/* Hover Effects */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04),
+    0 0 0 1px rgba(30, 64, 175, 0.1);
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* QR Scanner Specific Styles */
+.qr-scanner-overlay {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+.qr-scan-frame {
+  border: 2px solid #3b82f6;
+  box-shadow: 
+    0 0 0 4px rgba(59, 130, 246, 0.1),
+    inset 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Professional Card Styling */
+.card-professional {
+  background: linear-gradient(135deg, 
+    rgba(248, 250, 252, 0.08) 0%,
+    rgba(248, 250, 252, 0.04) 100%
+  );
+  border: 1px solid rgba(248, 250, 252, 0.12);
+  backdrop-filter: blur(16px);
+}
+
+/* Button Variants */
+.btn-railway-primary {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-railway-primary:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px -8px rgba(30, 64, 175, 0.3);
+}
+
+.btn-railway-secondary {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-railway-secondary:hover {
+  background: linear-gradient(135deg, #047857 0%, #059669 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px -8px rgba(5, 150, 105, 0.3);
+}
+
+/* Responsive Design Helpers */
+@media (max-width: 768px) {
+  .bg-gradient-hero {
+    background: linear-gradient(180deg, 
+      #0f172a 0%,
+      #1e293b 50%,
+      #0f172a 100%
+    );
+  }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  .hover-lift,
+  .animate-fade-in,
+  .animate-slide-up,
+  .btn-railway-primary,
+  .btn-railway-secondary {
+    animation: none;
+    transition: none;
+    transform: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .bg-gradient-glass {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .shadow-elevation,
+  .shadow-glow,
+  .shadow-accent {
+    box-shadow: 0 0 0 2px currentColor;
+  }
+}
