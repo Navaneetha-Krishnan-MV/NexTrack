@@ -416,9 +416,9 @@ export interface RailwayPart {
         dateOfMfg: "08-02-2023",
         warrantyExpiry: "02-28",
         history: "Batch 10: Supplied to Zone-CR"
-      }
+      }  
   ];
-  
+  //
   // Get warranty status
   export const getWarrantyStatus = (warrantyExpiry: string) => {
     try {
