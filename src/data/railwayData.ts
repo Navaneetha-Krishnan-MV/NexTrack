@@ -18,7 +18,7 @@ export interface RailwayPart {
         vendorCode: "VEND231",
         uniqueId: "20201219-A01",
         dateOfMfg: "19-12-2020",
-        warrantyExpiry: "12-24",
+        warrantyExpiry: "12-26",
         history: "Batch 1: Supplied to Zone-ER"
       },
       {
@@ -120,7 +120,7 @@ export interface RailwayPart {
         vendorCode: "VEND412",
         uniqueId: "20210314-C01",
         dateOfMfg: "14-03-2021",
-        warrantyExpiry: "03-25",
+        warrantyExpiry: "11-25",
         history: "Batch 1: Supplied to Zone-SR"
       },
       {
@@ -190,7 +190,7 @@ export interface RailwayPart {
         vendorCode: "VEND690",
         uniqueId: "20201022-B08",
         dateOfMfg: "22-10-2020",
-        warrantyExpiry: "10-23",
+        warrantyExpiry: "10-29",
         history: "Batch 8: Supplied to Zone-NR"
       },
       {
@@ -344,7 +344,7 @@ export interface RailwayPart {
         vendorCode: "VEND517",
         uniqueId: "20220317-C03",
         dateOfMfg: "17-03-2022",
-        warrantyExpiry: "03-25",
+        warrantyExpiry: "12-25",
         history: "Batch 3: Supplied to Zone-WR"
       },
       {
